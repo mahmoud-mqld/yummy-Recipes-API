@@ -1,0 +1,272 @@
+@font-face {
+    font-family: 'm1';
+    src: url(../fonts/DeliusSwashCaps-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'm2';
+    src: url(../fonts/Lobster_Two/LobsterTwo-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'pixel';
+    src: url(../fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf);
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: m1;
+    overflow: hidden;
+
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+ul {
+    list-style: none;
+}
+
+:root {
+    --nav-width: clamp(120px, 13vw, 30vw);
+    --width: 270px;
+    /* ------------Color Palette--------------------- */
+--color-1:#155263;
+--color-2:#FF6F3C;
+--color-3:#FF9A3C;
+--color-4:#FFC93C;
+--color-5:#6AA4FF;
+--dark:;
+    
+}
+/* ------------loading---------------- */
+.loading {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999999999999;
+    overflow: hidden;
+    
+}
+
+.loader {
+    position: relative;
+    width: 120px;
+    height: 14px;
+    border-radius: 0 0 15px 15px;
+    background-color: #3e494d;
+    box-shadow: 0 -1px 4px #5d6063 inset;
+    animation: panex 0.5s linear alternate infinite;
+    transform-origin: 170px 0;
+    z-index: 10;
+    perspective: 500px;
+
+}
+.loader::before {
+  content: '';
+  position: absolute;
+  left: calc( 100% - 2px);
+  top: 0;
+  z-index: -2;
+  height: 10px;
+  width: 70px;
+  border-radius: 0 4px 4px 0;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#6c4924, #4b2d21), linear-gradient(#4d5457 24px, transparent 0), linear-gradient(#9f9e9e 24px, transparent 0);
+  background-size: 50px 10px , 4px 8px , 24px 4px;
+  background-position: right center , 17px center , 0px center;
+}
+  .loader::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: -2;
+    transform: translate(-50% , -20px) rotate3d(75, -2, 3, 78deg);
+    width: 55px;
+    height: 53px;
+    background: #fff;
+    background-image:
+    radial-gradient(circle 3px , #fff6 90%, transparent 10%),
+    radial-gradient(circle 12px , #ffc400 90%, transparent 10%),
+    radial-gradient(circle 12px , #ffae00 100%, transparent 0);
+    background-repeat: no-repeat;
+    background-position: -4px -6px , -2px -2px , -1px -1px;
+    box-shadow: -2px -3px #0002 inset, 0 0 4px #0003 inset;
+    border-radius: 47% 36% 50% 50% / 49% 45% 42% 44%;
+    animation: eggRst 1s ease-out infinite;
+  }
+
+@keyframes eggRst {
+  0% ,  100%{  transform: translate(-50%, -20px) rotate3d(90, 0, 0, 90deg); opacity: 0; }
+  10% , 90% {  transform: translate(-50%, -30px) rotate3d(90, 0, 0, 90deg); opacity: 1; }
+  25%  {transform:  translate(-50% , -40px) rotate3d(85, 17, 2, 70deg) }
+  75% {transform:  translate(-50% , -40px) rotate3d(75, -3, 2, 70deg) }
+  50% {transform:  translate(-55% , -50px) rotate3d(75, -8, 3, 50deg) }
+}
+@keyframes panex {
+  0%{  transform: rotate(-5deg)  }
+  100%{  transform: rotate(10deg)  }
+}
+  
+/* ---------------------- */
+.sidebar {
+    background-color:var(--color-1);
+    height: 100vh;
+    width: var(--nav-width);
+    z-index: 10;
+    left: calc(var(--nav-width) * -1);
+    top: 0;
+    bottom: 0;
+    transition: left .3S ease-in;
+}
+
+.outer {
+    font-size: clamp(1rem, 0.375rem + 2vw, 1.5rem);
+    font-weight: 600;
+    top: 0;
+    height: 100vh;
+    width: 3em;
+    background-color: var(--color-5);
+    right: 0;
+    left: 100%;
+}
+
+.slide {
+    left: 0;
+}
+
+.side-btn {
+    cursor: pointer;
+}
+
+.inner ul {
+
+    height: 100% !important;
+}
+
+
+
+.inner ul li {
+    font-size: clamp(.5rem, 1.1rem, 2rem);
+    position: relative;
+   color: var(--color-4);
+   font-weight: 600;
+}
+
+.slide-btn {
+    margin: 1.3em;
+}
+
+.logo {
+    filter: drop-shadow(-2px -1px 2px);
+    cursor: pointer;
+    padding: 10px;
+    width: 100px;
+
+}
+
+/* --------------------------------------------------------------- */
+/* -----------------------cards----------------------------------- */
+.inner,
+.card-slide {
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.card-slide {
+    inset: 0;
+    top: 100%;
+    background-color: rgba(21, 22, 22, .5);
+}
+
+.inner:hover .card-slide {
+    top: 0px;
+}
+
+.inner:hover {
+    filter: drop-shadow(3px 2px 5px);
+}
+
+/* -------------------details------------------------------ */
+.Recipes {
+    /* padding: 5px; */
+    border-radius: 3px;
+    width: fit-content;
+    background-color: var(--color-3);
+    margin-bottom: 5px;
+    margin-inline: 2px;
+}
+
+.Ingredient {
+    color: var(--color-1);
+}
+
+.measure {
+    padding-inline-end: 6px;
+    color: var(--color-1);
+}
+.close-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2em;
+}
+/* -----------------------------------form----------------------------------------------- */
+#form {
+}
+form div {
+    height: 5em;
+
+}
+form input {
+    padding: .6em;
+    border-radius: 10px;
+}
+form {
+    padding: 3rem;
+    border-radius: 90%;
+    background-color: var(--color-3);
+}
+/* ------------scrollbar--------------------------------- */
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--color-5);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    height: 30px;
+    background: var(--color-2);
+    border-radius: 10px;
+    outline: 1px solid var(--color-1);
+
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-4);
+  }

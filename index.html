@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yummy</title>
+    <link rel="shortcut icon" href="assets/5901558.png" type="image/x-icon">
+    <!-- --fontawosome-- -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- --bootstrab-- -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- --main style-- -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="loading">
+
+        <span class="loader"></span>
+
+
+    </div>
+
+    <div class="container sidebar position-fixed p-0">
+        <div class="inner">
+            <ul class="d-flex mt-3 p-2 gap-4 flex-column ">
+                <li>Home</li>
+                <li>Search</li>
+                <li>Categories</li>
+                <li>ingrediant</li>
+                <li>Area</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+        <div class="outer d-flex flex-column align-items-center justify-content-between  position-absolute">
+            <img class="logo" src="assets/1886722.png" alt="logo">
+            <div class="side-btn p-3 d-flex flex-column align-items-center justify-content-between gap-2">
+                <span id="btn-text"></span> <i id="nav-icon" class="fa-solid fa-bars"></i>
+
+            </div>
+            <div></div>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="search d-none">
+
+            <div class="p-3 gap-1 d-flex flex-wrap justify-content-end justify-content-md-evenly ">
+                <input id="name" placeholder="Enter Meal Name.." type="text">
+                <input id="letter" pattern="[A-Za-z]{1}" maxlength="1" placeholder="Enter First letter.." type="text">
+
+            </div>
+
+        </div>
+
+
+
+        <div="" id="gallery" class="cards ms-auto row">
+
+    </div>
+
+    <div id="ditails"
+        class=" flex-wrap d-none justify-content-end bg-dark-subtle d-flex justify-content-lg-evenly ms-auto py-5 pe-3 min-vh-100 ">
+        <div class="close-btn "> <i class="fa-solid fa-left-long"></i> </div>
+    </div>
+
+    <div id="form" class="vh-100 d-none">
+        <div
+            class="  p-4  m-auto justify-content-end justify-content-md-evenly col-lg-6  d-flex flex-wrap  ">
+            <form class="d-flex flex-wrap justify-content-center align-items-center gap-4 h-25 w-75gx-4" action="">
+                <div>
+                    <input id="username" placeholder="Enter Your Name.." type="text" required autocomplete="name"
+                       >
+                    <p id="namerrorMessage" class="error-message d-none">please Enter a valid name</p>
+
+                </div>
+
+
+                <div>
+                    <input id="usermail" placeholder="Enter Your Mail.." type="email" required
+                        autocomplete="email" >
+                    <p id="mailerrorMessage" class="error-message d-none"> please Enter a valid Email</p>
+                </div>
+
+                <div>
+                    <input id="userphone" placeholder="Enter Your Phone.." type="tel" required autocomplete="tel"
+                        >
+                    <p id="phoneerrorMessage" class="error-message d-none"> please Enter a valid phone</p>
+                </div>
+                <div>
+                    <input id="userage" placeholder="Enter Your age.." type="number" required>
+                        
+                    <p id="ageerrorMessage" class="error-message d-none"> please Enter a valis age</p>
+                </div>
+                <div>
+                    <input id="pass" placeholder="Enter Your Password.." type="password" required
+                        autocomplete="new-password">
+                    <p id="passerrorMessage" class="error-message d-none"> please Enter a valid password</p>
+                </div>
+                <div>
+                    <input id="re-pass" placeholder="Re-Enter Your Password.." type="password" required
+                        autocomplete="current-password">
+                    <p id="errorMessage" class="error-message d-none"></p>
+                </div>
+
+
+                <button id="submit" disabled class=" w-50 m-auto" type="submit">Submit</button>
+            </form>
+        </div>
+
+    </div>
+
+
+    </div>
+
+
+
+
+    <!-- ----js----- -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/JQ.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
