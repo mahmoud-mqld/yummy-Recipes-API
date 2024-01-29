@@ -242,10 +242,8 @@ function displaymeals(data) {
 // ----------------------get meal details by id-----------------------------------------------------
 async function getMealById(id) {
   $('.loading').fadeIn(200)
-
   const data = await fetch(
-    `https:www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
-  );
+    `https://www.themealdb.com/api/json/v1/1/lookup.php?i=52928`);
   const res = await data.json();
   console.log(res);
   const meal = res.meals[0];
