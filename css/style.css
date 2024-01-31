@@ -243,8 +243,8 @@ form input {
 }
 form {
     padding: 3rem;
-    border-radius: 90%;
-    background-color: var(--color-3);
+    border-radius:20%;
+    background-color: var(--color-2);
 }
 /* ------------scrollbar--------------------------------- */
 /* width */
